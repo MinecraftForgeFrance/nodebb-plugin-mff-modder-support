@@ -1,0 +1,26 @@
+{
+  "name": "nodebb-plugin-mff-modder-support",
+  "version": "1.0.0",
+  "description": "A NodeBB plugin to manage the modder support section. Designed for our needs.",
+  "main": "library.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MinecraftForgeFrance/nodebb-plugin-mff-modder-support.git"
+  },
+  "keywords": [
+    "NodeBB",
+    "queue",
+    "tags",
+    "manage",
+    "support"
+  ],
+  "author": "robin4002",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/MinecraftForgeFrance/nodebb-plugin-mff-modder-support/issues"
+  },
+  "homepage": "https://github.com/MinecraftForgeFrance/nodebb-plugin-mff-modder-support#readme"
+}
