@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/MinecraftForgeFrance/nodebb-plugin-mff-modder-support/issues"
   },
-  "homepage": "https://github.com/MinecraftForgeFrance/nodebb-plugin-mff-modder-support#readme"
+  "homepage": "https://github.com/MinecraftForgeFrance/nodebb-plugin-mff-modder-support#readme",
+  "nbbpm": {
+    "compatibility": "^1.15.0"
+  }
 }

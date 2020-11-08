@@ -1,4 +1,4 @@
-const groups = module.parent.require("./groups");
+const groups = require.main.require('./src/groups');
 
 const ModderSupportPlugin = {
     init(params, callback) {
