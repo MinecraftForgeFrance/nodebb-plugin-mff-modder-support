@@ -19,25 +19,6 @@ const ModderSupportPlugin = {
         else {
             callback(null, data);
         }
-    },
-    postQueue(data, callback) {
-        // don't add to queue if version tag is missing, let filter:topic.post handle the error.
-        if (isSupportSection(data.data.cid) && (data.data.tags && data.data.tags.length > 0)) {
-            if (isConfirmedModder(data.data.uid, (err, member) => {
-                if (err) {
-                    callback(err);
-                }
-                else {
-                    if (!member) {
-                        data.shouldQueue = true;
-                    }
-                    callback(null, data);
-                }
-            }));
-        }
-        else {
-            callback(null, data);
-        }
     }
 };
 
@@ -50,11 +31,6 @@ function checkModderHelpRequest(data, tags, callback) {
 
 function isSupportSection(cid) {
     return cid == 21; // hard coded for now
-}
-
-function isConfirmedModder(uid, callback) {
-    // hard coded for now
-    groups.isMember(uid, "Moddeurs confirmés", callback);
 }
 
 module.exports = ModderSupportPlugin;
