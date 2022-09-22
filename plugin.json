@@ -1,11 +1,17 @@
 {
-  "id": "nodebb-plugin-mff-modder-support",
+  "id": "@minecraftforgefrance/nodebb-plugin-mff-modder-support",
   "url": "https://github.com/MinecraftForgeFrance/nodebb-plugin-mff-modder-support",
   "main": "./library.js",
+  "templates": "./static/templates",
+  "modules": {
+    "../admin/plugins/mff-modder-support.js": "static/js/admin.js"
+  },
+  "settingsRoute": "/admin/plugins/mff-modder-support",
   "hooks": [
     { "hook": "static:app.load", "method":"init" },
     { "hook": "filter:topic.post", "method": "topicPost" },
-    { "hook": "filter:topic.edit", "method": "topicEdit" }
+    { "hook": "filter:topic.edit", "method": "topicEdit" },
+    { "hook": "filter:admin.header.build", "method": "addToAdminNav" }
   ],
   "languages": "languages"
 }
