@@ -1,5 +1,5 @@
 define('admin/plugins/mff-modder-support', ['settings', 'alerts'], function(Settings, alerts) {
-	var MFFModderSupport = {};
+	const MFFModderSupport = {};
 	
 	MFFModderSupport.init = function() {
 		Settings.load('mff-modder-support', $('.mff-modder-support-settings'));

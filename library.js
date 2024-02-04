@@ -11,7 +11,7 @@ const ModderSupportPlugin = {
         const { router } = params;
 
         // Admin panel
-        routeHelpers.setupAdminPageRoute(router, '/admin/plugins/mff-modder-support', [], renderAdmin);
+        routeHelpers.setupAdminPageRoute(router, '/admin/plugins/mff-modder-support', renderAdmin);
 
         try {
             const options = await meta.settings.get('mff-modder-support');
@@ -58,6 +58,7 @@ async function renderAdmin(req, res) {
 	const cids = await db.getSortedSetRange('categories:cid', 0, -1);
 	const data = await categories.getCategoriesFields(cids, ['cid', 'name']);
     res.render('admin/plugins/mff-modder-support', {
+        title: 'MFF modder support',
 		categories: data,
 	});
 }

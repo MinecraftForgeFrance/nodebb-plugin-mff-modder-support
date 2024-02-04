@@ -1,29 +1,22 @@
-<form role="form" class="mff-modder-support-settings">
-	<div class="row">
-		<div class="col-xs-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">MFF Support settings</div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-lg-6 col-xs-12">
-                            <div class="form-group">
-                                <label for="supportCategoryId">
-                                    Support category
-                                </label>
-                                <select class="form-control" id="supportCategoryId" class="form-control" name="supportCategoryId">
-								{{{ each categories }}}
-								    <option value="{categories.cid}">{categories.name}</option>
-								{{{ end }}}
-							</select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="acp-page-container">
+	<!-- IMPORT admin/partials/settings/header.tpl -->
+
+	<div class="row m-0">
+		<div id="spy-container" class="col-12 px-0 mb-4" tabindex="0">
+			<form class="form mff-modder-support-settings">
+				<div class="mb-4">
+					<h5 class="fw-bold tracking-tight settings-header">Main settings</h5>
+
+                    <label for="supportCategoryId">
+                        Support category
+                    </label>
+                    <select class="form-control" id="supportCategoryId" class="form-control" name="supportCategoryId">
+                    {{{ each categories }}}
+                        <option value="{categories.cid}">{categories.name}</option>
+                    {{{ end }}}
+					</select>
+				</div>
+			</form>
 		</div>
 	</div>
-</form>
-
-<button id="save" class="floating-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
-	<i class="material-icons">save</i>
-</button>
+</div>

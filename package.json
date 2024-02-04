@@ -1,6 +1,6 @@
 {
   "name": "@minecraftforgefrance/nodebb-plugin-mff-modder-support",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A NodeBB plugin to manage the modder support section. Designed for our needs.",
   "main": "library.js",
   "scripts": {
@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/MinecraftForgeFrance/nodebb-plugin-mff-modder-support#readme",
   "nbbpm": {
-    "compatibility": "^2.0.0"
+    "compatibility": "^3.0.0"
   }
 }
