@@ -45,7 +45,7 @@ const ModderSupportPlugin = {
 };
 
 function checkModderHelpRequest(tags) {
-    if(!tags || tags.length < 1) {
+    if (!tags || tags.length < 1) {
         throw new Error('[[modder-support:no-version]]');
     }
 }
@@ -55,12 +55,12 @@ function isSupportSection(cid) {
 }
 
 async function renderAdmin(req, res) {
-	const cids = await db.getSortedSetRange('categories:cid', 0, -1);
-	const data = await categories.getCategoriesFields(cids, ['cid', 'name']);
+    const cids = await db.getSortedSetRange('categories:cid', 0, -1);
+    const data = await categories.getCategoriesFields(cids, ['cid', 'name']);
     res.render('admin/plugins/mff-modder-support', {
         title: 'MFF modder support',
-		categories: data,
-	});
+        categories: data,
+    });
 }
 
 module.exports = ModderSupportPlugin;

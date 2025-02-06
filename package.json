@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/MinecraftForgeFrance/nodebb-plugin-mff-modder-support#readme",
   "nbbpm": {
-    "compatibility": "^3.0.0"
+    "compatibility": "^3.0.0 || ^4.0.0"
   }
 }
