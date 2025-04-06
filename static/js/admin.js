@@ -2,7 +2,7 @@ define('admin/plugins/mff-modder-support', ['settings', 'alerts'], function (Set
     const MFFModderSupport = {};
 
     MFFModderSupport.init = function () {
-        const settingsForm = document.querySelector('.mff-modder-support-settings');
+        const settingsForm = $('.mff-modder-support-settings');
         const saveButton = document.getElementById('save');
         Settings.load('mff-modder-support', settingsForm);
 
